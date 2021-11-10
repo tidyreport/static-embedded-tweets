@@ -31,12 +31,12 @@ The html snippet can be inserted into the body of your html page for a fast load
 
 ## Requirements
 
-You must sign up and gain access to the freemium [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) from rapidapi.com.  You must also sign up for a free twitter developer account [here](https://developer.twitter.com/en/apply-for-access) and then acquire your own free Twitter API Bearer Token which is a required input to the static embedded tweets API.
+You must subscribe to a plan to gain access to the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) at rapidapi.com.  You must also sign up for a free twitter developer account [here](https://developer.twitter.com/en/apply-for-access) and then acquire your own free Twitter API Bearer Token which is a required input to the static embedded tweets API.
 
 
 ## Dark and Light Theme Support
 
-The static-tweet-gen.css default theme is tweet-theme-light.  But, you can change the theme to either tweet-theme-light or tweet-theme-dark.  This is done by adding or changing any top level html element class to either tweet-theme-light or tweet-theme-dark.
+The static-tweet-gen.css default theme is tweet-theme-light.  But, you can change the theme to either tweet-theme-light or tweet-theme-dark.  This is done by adding either the tweet-theme-light or the tweet-theme-dark class to a parent element of your choice in your html.
 
 
 ## Dynamic update
