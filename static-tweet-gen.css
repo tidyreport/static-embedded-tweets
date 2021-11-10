@@ -1,0 +1,560 @@
+:root,
+.tweet-theme-light {
+    --background-color: rgb(255,255,255);
+    --border-color: rgb(204,214,221);
+    --text-color: rgb(20,23,26);
+    --author-color: rgb(43,123,185);
+    --author-hover-color: rgb(59,148,217);
+    --handle-color: rgb(101,119,134);
+    --parent-hover1: rgb(243,247,249);
+    --parent-hover2: rgb(234,237,240);
+	--tooltip-shadow: rgba(0,0,0,0.5);
+}
+.tweet-theme-dark {
+    --background-color: rgb(0,0,0);
+    --border-color: rgb(47,51,54);
+    --text-color: rgb(217,217,217);
+    --author-color: rgb(43,123,185);
+    --author-hover-color: rgb(59,148,217);
+    --handle-color: rgb(110,118,125);
+    --parent-hover1: rgb(16,16,16);
+    --parent-hover2: rgb(26,26,26);
+	--tooltip-shadow: rgba(255,255,255,0.5);
+}
+
+.tweet-parent-1 {
+	all: initial;
+    background: var(--background-color);
+    margin: 15px 0;
+    padding-right: 14px;
+	padding-left: 14px;
+	padding-top: 9px;
+	padding-bottom: 6px;
+    background-color: var(--background-color);
+	border: 1px solid var(--border-color);
+    border-radius: 15px;
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif;
+    color: #1c2022;
+    max-width: 550px;
+    min-width: 100px;
+    text-align: left;
+	word-wrap:break-word;
+	flex-grow: 1;
+}
+
+.tweet-parent-1:hover .tweet-parent-2, .tweet-parent-1:hover {
+	background-color: var(--parent-hover1);
+}
+
+.tweet-parent-1 a {
+    color: var(--author-color);
+    text-decoration: none;
+}
+
+.tweet-parent-1 a:hover {
+    color: var(--author-hover-color);
+}
+
+.tweet-parent-2 {
+	all: inherit;
+    background: var(--background-color);
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif;
+    color: #1c2022;
+    max-width: 550px;
+    text-align: left;
+	word-wrap:break-word;
+}
+
+.tweet-parent-2:hover {
+	background-color: var(--parent-hover2) !important;
+}
+
+.tweet-parent-2 a {
+    color: var(--author-color);
+    text-decoration: none;
+}
+
+.tweet-parent-2 a:hover {
+    color: var(--author-hover-color);
+}
+
+.tweet-parent-tweet-card {
+	all: inherit;
+    background: var(--background-color);
+    margin-top: 0px;
+    margin-bottom: 7px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: Helvetica, Roboto, "Segoe UI", Calibri, sans-serif;
+    color: #1c2022;
+    max-width: 550px;
+    text-align: left;
+	word-wrap:break-word;
+	cursor: pointer;
+}
+
+.tweet-parent-1:hover .tweet-parent-tweet-card, .tweet-parent-1:hover {
+	background-color: var(--parent-hover1);
+}
+
+.tweet-parent-tweet-card:hover {
+	background-color: var(--parent-hover2) !important;
+}
+
+.tweet-parent-tweet-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	vertical-align: top;
+}
+
+.tweet-parent-tweet-card .tweet-card-title {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--text-color);
+	line-height: 1.3125;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tweet-parent-tweet-card .tweet-card-description {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--handle-color);
+	line-height: 1.3125;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	margin: 0px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.tweet-parent-tweet-card .tweet-card-link {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--handle-color);
+	line-height: 1.3125;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0px;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* header */
+.tweet-header {
+    display: flex;
+    align-items: stretch;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.tweet-header2 {
+    display: flex;
+	align-items: stretch;
+    width: inherit;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.tweet-header .tweet-profile {
+    margin: 0px;
+    flex-shrink: 0;
+}
+
+.tweet-header2 .tweet-profile2 {
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.tweet-header .tweet-profile img,
+.tweet-header .tweet-profile object {
+    margin: 0px;
+    border-radius: 50%;
+    height: 49px;
+    width: 49px;
+}
+
+.tweet-header2 .tweet-profile2 img,
+.tweet-header2 .tweet-profile2 object {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.tweet-header .tweet-profile img,
+.tweet-header2 .tweet-profile2 img {
+	background-color: var(--background-color);
+	border: 1px solid var(--border-color);
+}
+
+.tweet-header .tweet-author {
+    justify-content: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-header .tweet-author-name {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-color);
+    line-height: 1.3125;
+}
+
+.tweet-header2 .tweet-author-name2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-color);
+    line-height: 19.6833px;
+}
+
+.tweet-header .tweet-author-name:hover {
+    color: var(--author-hover-color);
+}
+
+.tweet-header2 .tweet-author-name2:hover {
+    color: var(--author-hover-color);
+}
+
+.tweet-header .tweet-author-handle {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: var(--handle-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.6833px;
+}
+
+.tweet-header2 .tweet-author-handle2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    color: var(--handle-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19.6833px;
+    margin-left: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tweet-header .tweet-bird {
+	margin-left: auto;
+}
+
+.tweet-header2 .tweet-bird2 {
+	margin-left: auto;
+}
+
+.tweet-reply-line {
+	border-left: 2px solid var(--border-color);
+	margin-left: 24px;
+	padding-left: 24px;
+	margin-bottom: 5px;
+}
+
+p.tweet-body.reply {
+	font-size: 15px;
+	line-height: 19.6833px;
+}
+
+/* tweet body (text) */
+.tweet-body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 19px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 24.9333px;
+    overflow-wrap: break-word;
+    padding: 0px;
+    margin: 0px;
+	margin-bottom: 10px;
+}
+
+p.tweet-body {
+	margin: 0px 0px 10px 0px;
+}
+
+.tweet-body2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 19.6833px;
+    overflow-wrap: break-word;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+p.tweet-body2 {
+	margin: 0px 0px 10px 0px;
+}
+
+.tweet-media {
+	border: 1px solid var(--border-color);
+	border-radius: 15px;
+	background-color: var(--background-color);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.tweet-video-wrapper {
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+
+/* images */
+.tweet-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+	vertical-align: top;
+}
+
+/* videos */
+.tweet-media video {
+	display: block;
+    width: 100%;
+    height: auto;
+	outline: none;
+	vertical-align: top;
+}
+
+/* timestamp */
+.tweet-timestamp {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+
+}
+
+.tweet-timestamp a {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--handle-color);
+}
+
+/* footer */
+.tweet-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    border: 1px solid var(--border-color);
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.tweet-footer a {
+    color: var(--handle-color);
+    font-size: 16px;
+	font-family: sarif;
+}
+
+.tweet-footer a:hover {
+    filter: hue-rotate(180deg);
+}
+
+.tweet-like-count {
+    margin-left: 5px;
+}
+
+.tweet-retweet-count {
+    margin-left: 5px;
+	margin-right: 20px;
+}
+
+img.emoji {
+   height: 1em;
+   width: 1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* icons */
+.tweet-user-empty-avatar-image,
+.tweet-verified-icon,
+.tweet-bird-icon,
+.tweet-like-icon,
+.tweet-retweet-icon,
+.tweet-card-link-icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: text-bottom;
+}
+
+
+.tweet-verified-icon,
+.tweet-bird-icon {
+    filter: invert(39%) sepia(75%) saturate(2055%) hue-rotate(175deg) brightness(100%) contrast(101%);
+}
+
+.tweet-video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.tweet-play-button-background:hover {
+    background-color: rgb(26, 145, 218);
+}
+
+.tweet-play-button-background {
+    position: absolute;
+    top: calc(50% - 33px);
+    left: calc(50% - 33px);
+    background-color: rgb(29, 161, 242);
+    width: 59px;
+    height: 59px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.tweet-play-button {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: calc(50% - 16px);
+    left: calc(50% - 15px);
+    filter: invert(100%) sepia(52%) saturate(0%) hue-rotate(36deg) brightness(109%) contrast(101%);
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M20.436%2011.37L5.904%202.116c-.23-.147-.523-.158-.762-.024-.24.132-.39.384-.39.657v18.5c0%20.273.15.525.39.657.112.063.236.093.36.093.14%200%20.28-.04.402-.117l14.53-9.248c.218-.138.35-.376.35-.633%200-.256-.132-.495-.348-.633z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.tidy-tweet {
+	display: flex;
+	max-width: 550px;
+	min-width: 100px;
+	padding: 5px;
+	box-sizing: border-box;
+	border-bottom: 2px;
+	border-left: 1px;
+}
+
+.tidytooltip {
+	position: relative;
+	display: inline-block;
+}
+
+.tidytooltip .tidytooltiptext {
+	visibility: hidden;
+	font-size: 14px;
+	width: 200px;
+	box-shadow: 0 0 10px 0 var(--tooltip-shadow);
+	background-color: var(--parent-hover2);
+	color: var(--text-color);
+	text-align: left;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 0%;
+}
+
+.tidytooltip .tidytooltiptext::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 25%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent var(--parent-hover2) transparent;
+}
+
+.tidytooltip:hover .tidytooltiptext {
+	visibility: visible;
+}
+
+.tweet-user-empty-avatar-image {
+	background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3C!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"%3E%3Csvg width="401px" height="401px" enable-background="new 312.809 0 401 401" version="1.1" viewBox="312.809 0 401 401" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"%3E%3Cg transform="matrix(1.223 0 0 1.223 -467.5 -843.44)"%3E%3Crect x="601.45" y="653.07" width="401" height="401" fill="%23E4E6E7"/%3E%3Cpath d="m802.38 908.08c-84.515 0-153.52 48.185-157.38 108.62h314.79c-3.87-60.44-72.9-108.62-157.41-108.62z" fill="%23AEB4B7"/%3E%3Cpath d="m881.37 818.86c0 46.746-35.106 84.641-78.41 84.641s-78.41-37.895-78.41-84.641 35.106-84.641 78.41-84.641c43.31 0 78.41 37.9 78.41 84.64z" fill="%23AEB4B7"/%3E%3C/g%3E%3C/svg%3E%0A');
+}
+
+.tweet-verified-icon {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M22.5%2012.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4%200-2.21-1.71-3.998-3.818-3.998-.47%200-.92.084-1.336.25C14.818%202.415%2013.51%201.5%2012%201.5s-2.816.917-3.437%202.25c-.415-.165-.866-.25-1.336-.25-2.11%200-3.818%201.79-3.818%204%200%20.494.083.964.237%201.4-1.272.65-2.147%202.018-2.147%203.6%200%201.495.782%202.798%201.942%203.486-.02.17-.032.34-.032.514%200%202.21%201.708%204%203.818%204%20.47%200%20.92-.086%201.335-.25.62%201.334%201.926%202.25%203.437%202.25%201.512%200%202.818-.916%203.437-2.25.415.163.865.248%201.336.248%202.11%200%203.818-1.79%203.818-4%200-.174-.012-.344-.033-.513%201.158-.687%201.943-1.99%201.943-3.484zm-6.616-3.334l-4.334%206.5c-.145.217-.382.334-.625.334-.143%200-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768%200-1.06s.768-.294%201.06%200l1.77%201.767%203.825-5.74c.23-.345.696-.436%201.04-.207.346.23.44.696.21%201.04z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.tweet-bird-icon {
+	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.tweet-like-icon {
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23E0245E%22%20d%3D%22M12%2021.638h-.014C9.403%2021.59%201.95%2014.856%201.95%208.478c0-3.064%202.525-5.754%205.403-5.754%202.29%200%203.83%201.58%204.646%202.73.813-1.148%202.353-2.73%204.644-2.73%202.88%200%205.404%202.69%205.404%205.755%200%206.375-7.454%2013.11-10.037%2013.156H12zM7.354%204.225c-2.08%200-3.903%201.988-3.903%204.255%200%205.74%207.035%2011.596%208.55%2011.658%201.52-.062%208.55-5.917%208.55-11.658%200-2.267-1.822-4.255-3.902-4.255-2.528%200-3.94%202.936-3.952%202.965-.23.562-1.156.562-1.387%200-.015-.03-1.426-2.965-3.955-2.965z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.tweet-retweet-icon {
+	background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23E0245E%22%20d%3D%22M23.77%2015.67c-.292-.293-.767-.293-1.06%200l-2.22%202.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414%200-.75.336-.75.75s.336.75.75.75h5.85c1.24%200%202.25%201.01%202.25%202.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06%200s-.294.768%200%201.06l3.5%203.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767%200-1.06zm-10.66%203.28H7.26c-1.24%200-2.25-1.01-2.25-2.25V6.46l2.22%202.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768%200-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06%200l-3.5%203.5c-.294.292-.294.767%200%201.06s.767.293%201.06%200l2.22-2.22V16.7c0%202.068%201.683%203.75%203.75%203.75h5.85c.414%200%20.75-.336.75-.75s-.337-.75-.75-.75z%22%2F%3E%3C%2Fsvg%3E);
+}
+
+.tweet-card-link-icon {
+    filter: invert(42%) sepia(11%) saturate(796%) hue-rotate(163deg) brightness(100%) contrast(89%);
+    background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M11.96%2014.945c-.067%200-.136-.01-.203-.027-1.13-.318-2.097-.986-2.795-1.932-.832-1.125-1.176-2.508-.968-3.893s.942-2.605%202.068-3.438l3.53-2.608c2.322-1.716%205.61-1.224%207.33%201.1.83%201.127%201.175%202.51.967%203.895s-.943%202.605-2.07%203.438l-1.48%201.094c-.333.246-.804.175-1.05-.158-.246-.334-.176-.804.158-1.05l1.48-1.095c.803-.592%201.327-1.463%201.476-2.45.148-.988-.098-1.975-.69-2.778-1.225-1.656-3.572-2.01-5.23-.784l-3.53%202.608c-.802.593-1.326%201.464-1.475%202.45-.15.99.097%201.975.69%202.778.498.675%201.187%201.15%201.992%201.377.4.114.633.528.52.928-.092.33-.394.547-.722.547z%22%2F%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M7.27%2022.054c-1.61%200-3.197-.735-4.225-2.125-.832-1.127-1.176-2.51-.968-3.894s.943-2.605%202.07-3.438l1.478-1.094c.334-.245.805-.175%201.05.158s.177.804-.157%201.05l-1.48%201.095c-.803.593-1.326%201.464-1.475%202.45-.148.99.097%201.975.69%202.778%201.225%201.657%203.57%202.01%205.23.785l3.528-2.608c1.658-1.225%202.01-3.57.785-5.23-.498-.674-1.187-1.15-1.992-1.376-.4-.113-.633-.527-.52-.927.112-.4.528-.63.926-.522%201.13.318%202.096.986%202.794%201.932%201.717%202.324%201.224%205.612-1.1%207.33l-3.53%202.608c-.933.693-2.023%201.026-3.105%201.026z%22%2F%3E%3C%2Fsvg%3E);
+}
