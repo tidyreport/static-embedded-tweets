@@ -1,44 +1,53 @@
 
 
-## static-embedded-tweets
+## Static Embedded Tweets API
 
-Create fast loading static embedded tweets for your website.
+Create fast loading static embedded tweets for your website with the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/details) available at [rapidapi.com](https://rapidapi.com/).  Additional files and documentation available at [github](https://github.com/tidyreport/static-embedded-tweets).  The API currently handles all tweet types with the exception of tweets with twitter polls.  This includes quote tweets, replies, image(s), video, gif, etc.
 
 
 ## Install Details
 
-CSS and JavaScript files are required to enable full styling and functionality of the embedded tweets created by the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) available at [rapidapi.com](https://rapidapi.com/).
+CSS and JavaScript files are required to enable full styling and functionality of the embedded tweets created by the API.
 
 
 
-1. Include the external JavaScript file for twitter emoji’s into your webpage.  Instructions are available [here](https://github.com/twitter/twemoji).  Take a look at our index.html file for an example.
-2. Add our static-tweet-gen.js file to your website and include it in your webpage.  Take a look at our index.html file for an example.
-3. Add our static-tweet-gen.css file to your website and include it in your webpage.  Take a look at our index.html file for an example.
-
-
-## API Usage
-
-The [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) get-tweet endpoint available at [rapidapi.com](https://rapidapi.com/) returns a JSON encoded object.  You will need to decode the returned JSON object (use the json_decode function for php).  The decoded data will include 3 name-value pairs.  They are defined like this:
-
-
-
-* success:  set to 0 for error, set to 1 for success
-* message:  a string that describes the error on error, blank string on success.
-* html:  the resulting html snippet on success, blank string on error.
-
-The html snippet can be inserted into the body of your html page for a fast loading static embedded tweet.  Take a look at our index.html file for an example.  In this file we used the API to create the html snippet seen in the body for tweet id 440322224407314432.
+1. Include the external JavaScript file for twitter emoji’s into your webpage. Instructions are available [here](https://github.com/twitter/twemoji). Take a look at our index.html file for an example.
+2. Add our static-tweet-gen.js file to your website and include it in your webpage. Take a look at our index.html file for an example.
+3. Add our static-tweet-gen.css file to your website and include it in your webpage. Take a look at our index.html file for an example.
 
 
 ## Requirements
 
-You must subscribe to a plan to gain access to the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) at rapidapi.com.  You must also sign up for a free twitter developer account [here](https://developer.twitter.com/en/apply-for-access) and then acquire your own free Twitter API Bearer Token which is a required input to the static embedded tweets API.
+You must subscribe to a plan to gain access to the freemium [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/details) at [rapidapi.com](https://rapidapi.com/) and obtain your own X-RapidAPI-Key which is a required input to the static embedded tweets API. You must also sign up for a free twitter developer account [here](https://developer.twitter.com/en/apply-for-access) and then acquire your own free Twitter API Bearer Token which is also a required input (X-Twitter-Bearer-Token) to the static embedded tweets API.
+
+
+## API Usage
+
+The API has one required input parameter which is “id”.  This is where you input the tweet ID that you’d like to convert into a fast loading embedded tweet.  There are other required parameters in the HTTP header as well.  Two of them are the X-RapidAPI-Key and the X-Twitter-Bearer-Token.  More details are available at the [endpoints tab](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) for the API.
+
+The API returns a JSON encoded object. You will need to decode the returned JSON object (use the json_decode function for php). The decoded data will include 3 name-value pairs. They are defined like this:
+
+
+
+* success: set to 0 for error, set to 1 for success
+* message: a string that describes the error on error, blank string on success.
+* html: the resulting html snippet on success, blank string on error.
+
+Note:  If the returned value is null or doesn’t include these name-value pairs, it probably indicates some kind of server error.  In this case, the HTTP response status code can help narrow down the cause of the error.
+
+The html snippet can be inserted into the body of your html page for a fast loading static embedded tweet. Take a look at our index.html file for an example. In this file we used the API to create the html snippets for tweet id 440322224407314432, 1456750715053948931, 1371638236699709440, 1458991502735167488, 1441164027061686280, and 1417999923681710080.
+
+
+## Performance Comparison
+
+The API creates significantly faster loading embedded tweets.  These tweets in general perform fewer HTTP requests and require much less JavaScript execution time which results in a much better performance for websites that embed tweets.  Our example index.html file contains multiple fast loading tweets generated by the API.  We also have a slow-tweets.html file which includes the same tweets except that they are the normal slow twitter embedded tweets.  Feel free to load them into a browser and compare the load times.  In the Chrome browser, you can open up Chrome DevTools, select the network tab and load the page to compare timing.  Take a look at [tidyreport.com](https://www.tidyreport.com/) if you’re interested in an example of a hosted website with a lot of fast loading tweets.  Click the blue buttons at the top of tidyreport.com to load different content.  Another tip to further improve the speed of these static embedded tweets on your site is to add image caching and image lazy load to your site.
 
 
 ## Dark and Light Theme Support
 
-The static-tweet-gen.css default theme is tweet-theme-light.  But, you can change the theme to either tweet-theme-light or tweet-theme-dark.  This is done by adding either the tweet-theme-light or the tweet-theme-dark class to a parent element of your choice in your html.
+The static-tweet-gen.css default theme is tweet-theme-light. But, you can change the theme to either tweet-theme-light or tweet-theme-dark. This is done by adding either the tweet-theme-light or the tweet-theme-dark class to a parent element of your choice in your html.
 
 
 ## Dynamic update
 
-If you make dynamic changes to your page via ajax without reloading the page, you can add this line of JavaScript code when appropriate:  etweet.update().  This will update your static embedded tweets time, render the twitter emojis, and add click events to some of the elements.  All of this normally only happens on page load.
+If you make dynamic changes to your page via ajax without reloading the page, you can add this line of JavaScript code when appropriate: etweet.update(). This will update your static embedded tweets time to your local time, render the twitter emojis, and add click events to some of the elements. All of this normally only happens on page load.
