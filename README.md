@@ -2,7 +2,7 @@
 
 ## Static Embedded Tweets API
 
-Create fast loading static embedded tweets for your website with the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/details) available at [rapidapi.com](https://rapidapi.com/).  Additional files and documentation available at [github](https://github.com/tidyreport/static-embedded-tweets).  The API currently handles all tweet types with the exception of tweets with twitter polls.  This includes quote tweets, replies, image(s), video, gif, etc.
+Create fast loading static embedded tweets for your website with the [static embedded tweets API](https://rapidapi.com/tidyreport/api/static-embedded-tweets/details) available at [rapidapi.com](https://rapidapi.com/).  Additional files and documentation available at [github](https://github.com/tidyreport/static-embedded-tweets).  The API currently handles all tweet types with the exception of tweets with twitter polls.  This includes quote tweets, replies, image(s), video, gif, twitter card, etc.
 
 
 ## Install Details
