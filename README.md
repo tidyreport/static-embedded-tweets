@@ -23,7 +23,11 @@ You must subscribe to a plan to gain access to the freemium [static embedded twe
 
 ## API Usage
 
-We created an example of how to use the API in PHP.  The file is named get-tweet-html.php at [github](https://github.com/tidyreport/static-embedded-tweets).  Rapidapi also provides some snippets for other programming languages but they are not as complete as our PHP example at github.
+We created an example PHP function that you can use to execute the API call.  This function is designed to be executed within a try/catch block.  The function includes all of the input parameters that are required to execute the API call.
+
+getTweetHtml($id, $rapidApiKey, $twitterBearerToken)
+
+The php function is in a file named get-tweet-html.php in this repository and it also includes an example of how to use it.  Rapidapi also provides some snippets for other programming languages but they are not as complete as our PHP example.
 
 The API has one required input parameter which is “id”.  This is where you input the tweet ID that you’d like to convert into a fast loading embedded tweet.  There are other required parameters in the HTTP header as well.  Two of them are the X-RapidAPI-Key and the X-Twitter-Bearer-Token.  More details are available at the [endpoints tab](https://rapidapi.com/tidyreport/api/static-embedded-tweets/) for the API.
 
